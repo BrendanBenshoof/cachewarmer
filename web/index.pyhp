@@ -1,12 +1,9 @@
-<html/>
-<body/>
-<table>
+<html>
+<body>
+<b>
 <?
-for k in args.keys():
-	write("<tr><td>%s</td><td>%s</td></tr>"%(k,args[k]))
-
+write("Hello world")
 ?>
-
-</table>
+</b>
 </body>
 </html>

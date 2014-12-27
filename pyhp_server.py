@@ -36,6 +36,8 @@ class Handler(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_POST(self):
         global PATH, context
         mypath = self.path.split('?',1)
+        if mypath[0] == "/":
+        	mypath[0] = "/index.pyhp"
         filename = PATH+mypath[0]
         print filename
         data = ""
