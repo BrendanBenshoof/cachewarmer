@@ -87,7 +87,10 @@ def parse_file(text,context):
                     #print text[open_index:i]
                     ret = compile(write_header+text[open_index:i],"<string>","exec")
                     context['out']=""
-                    exec(ret,context,{})
+                    try:
+                        exec(ret,context,{})
+                    except Exception as E:
+                        return str(E)
                     text = text[:open_index-2]+context['out']+text[i+2:]
                     return parse_file(text,context)
         i = i+1
