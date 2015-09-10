@@ -1,0 +1,29 @@
+<html>
+<body>
+<ul>
+<?
+
+addr = args["hashaddr"][0]
+from pymultihash import pyMultiHash as pmh
+print("hello world")
+print(addr)
+import myrequests as requests
+
+with open("providers.txt") as fp:
+  for l in fp:
+    l = l.rstrip()
+    r = None
+    try:
+      print("polling",l)
+      r = requests.get(l+addr, timeout=(0.5, .5))
+    except Exception:
+      pass
+    print("done polling",l)
+    write("<li>"+l+addr+" has been polled</li>")
+
+?>
+
+</ul>
+
+</body>
+</html>

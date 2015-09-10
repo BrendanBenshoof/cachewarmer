@@ -65,7 +65,7 @@ def run_while_true(server_class=BaseHTTPServer.HTTPServer,
     is tested initially and after each request.  If its return value
     is true, the server continues.
     """
-    server_address = ('', 8080)
+    server_address = ('', 8090)
     httpd = server_class(server_address, handler_class)
     while True:
         httpd.handle_request()

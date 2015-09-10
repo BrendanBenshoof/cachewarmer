@@ -8,23 +8,10 @@
 
 </p>
 
-<p>
-  Current Providers are:
-  <ul>
-    <?
-with open("providers.txt") as fp:
-  for l in fp:
-    write("<li/>"+l+"</li>")
-
-    ?>
-  </ul>
-
-</p>
-
 <form action=./pinit.pyhp>
 IPFS Hash:<br>
 <input type="text" name="hashaddr">
-<input type="submit" value="Pin it!">
+<input type="button" value="Pin it!">
 </form>
 <p>
   It is important to note, that this essentially just sends a request to each of the donated gateways.
