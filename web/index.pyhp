@@ -1,6 +1,6 @@
 <html>
 <body>
-<h1> Pin Box</h1>
+<h1> CacheWarmer</h1>
 <p>
   This site offers a simple way to donate ipfs caching to otherusers.
   Feel free to add your own public gateway by creating an issue or pull request at the
@@ -21,10 +21,11 @@ with open("providers.txt") as fp:
 
 </p>
 
-<form action=./pinit.pyhp>
-IPFS Hash:<br>
+<form action=./cacheit.pyhp>
+IPFS Hash:
 <input type="text" name="hashaddr">
-<input type="submit" value="Pin it!">
+<br>
+<input type="submit" value="Cache it!">
 </form>
 <p>
   It is important to note, that this essentially just sends a request to each of the donated gateways.
