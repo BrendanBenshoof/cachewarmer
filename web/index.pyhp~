@@ -11,7 +11,6 @@
 </head>
 <body>
 <div class="content">
-	<canvas class="bg_canvas" id="bg_canvas" width="1850" height="1000"></canvas>
 	<div class="window_wrapper">
 		<div class="col-md-offset-1 col-md-10">
 <h1> CacheWarmer</h1>
