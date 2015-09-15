@@ -1,25 +1,17 @@
-Python Hypertext Markup
+CacheWarmer
 =======================
 
-I've developed a hobby of developing prototypes of bad programming languages. PyHP is a fruit of that effort.
+CacheWarmer is a fast and hacky solution to allow people to donate ipfs gateways to cache other people's content.
 
-PyHP is a low proformance fast development webapp  language. It might be good for prototyping or personal tool development.
+It practically just wgets the requested hash on a list of addresses (and aborts to avoid getting your file gumming up my ram)
 
-Usage is simple, in an HTML file open a `<?` tag, code in python then close with a `?>` tag.
+If you want to donate your public ipfs gateway, make a PR adding it to providers.txt
 
-Use the `write(String)` function to output inline into the HTML file.
+If you want to run your own instance of cachewarmer (you will have to manually pull to get updates), it should only require python3.
 
-	<html>
-	<body>
-	<b>
-	<?
-	write("Hello world")
-	?>
-	</b>
-	</body>
-	</html>
+After cloning the repo, in a screen session run:
 
-Aguments (post and get) are availible by the `args` dict.
-The global `out` is used to hold the output of a block.
+```
+python3 pyhp_server.py 8001 
 
-Any python files or packages you want to import can be stored in the "lib" directory
+```
