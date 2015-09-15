@@ -6,9 +6,7 @@
 <?
 
 addr = args["hashaddr"][0]
-from pymultihash import pyMultiHash as pmh
-print("hello world")
-print(addr)
+
 import myrequests as requests
 
 with open("providers.txt") as fp:
