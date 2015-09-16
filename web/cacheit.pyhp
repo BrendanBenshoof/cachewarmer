@@ -8,9 +8,11 @@
 addr = args["hashaddr"][0]
 
 import myrequests as requests
-
+import random
 with open("providers.txt") as fp:
-  for l in fp:
+  lines = fp.read().split("\n")
+  selection = random.sample(lines,5)
+  for l in selection:
     l = l.rstrip()
     r = None
     try:
@@ -20,6 +22,24 @@ with open("providers.txt") as fp:
       pass
     print("done polling",l)
     write("<li>"+l+addr+" has been polled</li>")
+
+if args["indexit"][0]=="on":
+  import indexit
+  import json
+  bloom = indexit.indexFile(addr)
+
+  if bloom:
+    index = {}
+    with open("index.json","r") as fp:
+      index = json.load(fp)
+    with open("index.json","w") as fp:
+      if str(bloom) not in index.keys():
+        index[str(bloom)]=addr
+      json.dump(index,fp)
+      write("<p>%s has been indexed with filter %d  using %d/256 ones </p>"%( addr, bloom, indexit.onecount(bloom)))
+  else:
+    print("bloom was none")
+
 
 ?>
 

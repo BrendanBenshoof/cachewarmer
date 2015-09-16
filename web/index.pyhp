@@ -7,13 +7,9 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 	<link rel="stylesheet" href="css/main.css">
-	<script type="text/javascript" src="js/live_bg.js"></script>
 </head>
 <body>
-<div class="content">
-	<canvas class="bg_canvas" id="bg_canvas" width="1850" height="1000"></canvas>
-	<div class="window_wrapper">
-		<div class="col-md-offset-1 col-md-10">
+
 <h1> CacheWarmer</h1>
 <p>
   This site offers a simple way to donate ipfs caching to otherusers.
@@ -39,6 +35,8 @@ with open("providers.txt") as fp:
 IPFS Hash:
 <input type="text" name="hashaddr">
 <br>
+Index it: <input type="checkbox" name="indexit" />
+<br>
 <input type="submit" value="Cache it!">
 </form>
 <p>
@@ -47,8 +45,15 @@ IPFS Hash:
   In fact I'm not going to promise that any of this works.
 
 </p>
-		</div>
-	</div>
-</div>
+
+<h2>Experimental Search:</h2>
+<form action=./searchit.pyhp>
+Search Terms
+<input type="text" name="terms">
+<br>
+<input type="submit" value="Search">
+</form>
+<p>**Note that this is kinda experimental, uses bloom filters, and has false positives</p>
+
 </body>
 </html>
