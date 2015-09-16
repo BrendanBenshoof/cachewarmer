@@ -23,7 +23,7 @@ with open("providers.txt") as fp:
     print("done polling",l)
     write("<li>"+l+addr+" has been polled</li>")
 
-if args["indexit"][0]=="on":
+if "indexit" in args.keys() and args["indexit"][0]=="on":
   import indexit
   import json
   bloom = indexit.indexFile(addr)
