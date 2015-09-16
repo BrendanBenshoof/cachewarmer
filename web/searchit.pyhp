@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+  Results:
+<ul>
+<?
+
+terms = args["terms"][0]
+
+import myrequests as requests
+
+
+import indexit
+import json
+lookup = indexit.generateBloomFilter(terms.split(" "))
+output = []
+with open("index.json","r") as fp:
+  index = json.load(fp)
+  for k in index.keys():
+    if indexit.filterInFilter(int(k),lookup):
+      output.append(index[k])
+
+if(len(output) > 0):
+  for res in output:
+    write("""<li/><a href="http://ipfs.io/ipfs/%s">%s</a></li>"""%(res,res))
+else:
+  write("<p/> Sorry, no hits </p>")
+
+
+?>
+
+</ul>
+
+</body>
+</html>
