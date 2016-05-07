@@ -11,7 +11,10 @@ import myrequests as requests
 import random
 with open("providers.txt") as fp:
   lines = fp.read().split("\n")
-  selection = random.sample(lines,5)
+  if len(lines) > 5:
+    selection = random.sample(lines,5)
+  else:
+    selection = lines
   for l in selection:
     l = l.rstrip()
     r = None
