@@ -1,6 +1,3 @@
-http://blamestross.com/ipfs/
-http://mars.i.ipfs.io:8080/ipfs/
-http://voxelot.us/ipfs/
 http://rx14.co.uk/ipfs/
-http://ipfs.io/ipfs/
-http://ipfs.pdxhub.org/ipfs/
+https://ipfs.io/ipfs/
+https://xmine128.tk/ipfs/
