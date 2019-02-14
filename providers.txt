@@ -4,3 +4,4 @@ https://ninetailed.ninja/ipfs/
 https://upload.global/ipfs/
 https://ipfs.jes.xxx/ipfs/
 https://siderus.io/ipfs/
+https://cloudflare-ipfs.com/ipfs/
