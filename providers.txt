@@ -1,6 +1,7 @@
 http://rx14.co.uk/ipfs/
 https://ipfs.io/ipfs/
-https://xmine128.tk/ipfs/
+https://ninetailed.ninja/ipfs/
 https://upload.global/ipfs/
 https://ipfs.jes.xxx/ipfs/
 https://siderus.io/ipfs/
+https://cloudflare-ipfs.com/ipfs/
