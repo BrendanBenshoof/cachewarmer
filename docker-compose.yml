@@ -1,0 +1,7 @@
+cachewarmer:
+  container_name: cachewarmer
+  build: .
+  ports:
+    - "8001:8001"
+#  volumes:
+#    - ${PWD}/providers.txt:/usr/src/app/providers.txt:ro
